@@ -1,0 +1,151 @@
+/* Fonts are loaded via Monotype. See the head section in index.html. */
+
+body {
+  text-align: center;
+  margin: 0;
+  font-family: 'TwentiethCenturyMedium';
+}
+
+/* Main page layout */
+
+#page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* A-Z menu */
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+/* A-Z buttons */
+
+#menu a {
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Hover effect for A-Z buttons */
+
+#menu a:hover {
+  color: #000;
+  background: #eee;
+}
+
+/* Selected letter */
+
+#menu .selected {
+  color: white;
+  background: maroon;
+}
+
+/* Game card grid */
+
+#content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Individual game cards */
+
+.game {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: transform 0.2s;
+}
+
+/* Card hover effect */
+
+.game:hover {
+  transform: translateY(-5px);
+}
+
+/* Game thumbnail */
+
+.game img {
+  width: 100%;
+  display: block;
+}
+
+/* Game title */
+
+.game .name {
+  padding: 1rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Close button */
+
+#closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+  padding: 1rem;
+  font-family: 'TwentiethCenturyLightItalic';
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.gameDetails {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.gameDetails img {
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
