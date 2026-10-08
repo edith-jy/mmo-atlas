@@ -1,9 +1,11 @@
-/* Fonts are loaded via Monotype. See the head section in index.html. */
+/* Fonts are loaded in the head section in index.html. */
 
 body {
   text-align: center;
   margin: 0;
-  font-family: 'TwentiethCenturyMedium';
+  font-family: 'Space Grotesk', sans-serif;
+  background: #F4F1E8;
+  color: #26332D;
 }
 
 /* Main page layout */
@@ -14,15 +16,17 @@ body {
 }
 
 #page h1 {
-  font-family: 'TwentiethCenturyBold';
+  font-family: 'Space Grotesk', sans-serif;
   margin: 1rem 0;
   font-size: 3rem;
+  font-weight: 700;
 }
 
 #page p {
-  font-family: 'TwentiethCenturyLightItalic';
+  font-family: 'Space Grotesk', sans-serif;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; 
+  font-weight: 400;
 }
 
 /* A-Z menu */
@@ -33,7 +37,10 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 1rem; 
+  background: #F1EDE3;
+  border-top: 1px solid #C9C3B6;
+  border-bottom: 1px solid #C9C3B6;
 }
 
 /* A-Z buttons */
@@ -42,21 +49,22 @@ body {
   padding: 1rem;
   border-radius: 1rem;
   cursor: pointer;
-  color: #666;
+  color: #527A68; 
+  font-weight: 600;
 }
 
 /* Hover effect for A-Z buttons */
 
 #menu a:hover {
-  color: #000;
-  background: #eee;
+  color: #26332D;
+  background: #DCE8E0;
 }
 
 /* Selected letter */
 
 #menu .selected {
   color: white;
-  background: maroon;
+  background: #527A68;
 }
 
 /* Game card grid */
@@ -73,18 +81,19 @@ body {
 /* Individual game cards */
 
 .game {
-  background: white;
-  border-radius: 1rem;
+  background: #F8F6EF;
+  border: 1px solid #C9C3B6;
+  border-radius: 0.75rem;
   overflow: hidden;
   cursor: pointer;
-  border: 1px solid #ddd;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 /* Card hover effect */
 
 .game:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 20px rgba(38, 51, 45, 0.12);
 }
 
 /* Game thumbnail */
@@ -99,7 +108,7 @@ body {
 .game .name {
   padding: 1rem;
   margin: 0;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* Close button */
@@ -118,7 +127,7 @@ body {
 
 footer {
   padding: 1rem;
-  font-family: 'TwentiethCenturyLightItalic';
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 /* Navigation */
@@ -136,7 +145,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(38, 51, 45, 0.6);
 
   display: flex;
   justify-content: center;
@@ -147,13 +156,13 @@ nav {
 }
 
 .gameDetails {
-  background: white;
-  border-radius: 1rem;
+  background: #F8F6EF;
+  border-radius: 0.75rem;
   padding: 2rem;
+  width: 90%;
   max-width: 600px;
-  max-height: 80vh;
-  overflow-y: auto;
   position: relative;
+  box-sizing: border-box;
 }
 
 .gameDetails img {
